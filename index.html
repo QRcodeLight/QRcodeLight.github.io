@@ -5,14 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test</title>
-    <p>Thanks for brightening our day</p>
+    <p>Test</p>
+
     <script>
-        //Javascript here
-    </script>
+		var visitor = false
+		console.log(visitor)
+
+		function pageLoaded()
+		{
+			document.getElementById("lights").innerHTML = true
+		}
+
+		function pageUnloaded()
+		{
+			document.getElementById("lights").innerHTML = false
+		}
+
+		window.onload = pageLoaded()
+		console.log(visitor)
+	</script>
 </head>
 
+<body onload="pageLoaded()">
+</body>
 <body>
-
+	<p id = "demo"></p>
+	<p id = "lights">false</p> 
 </body>
 
 
